@@ -32,7 +32,7 @@ const addToArray2 = (element, array) => {
 
 const removeNthElement = (index, array) => {
   // your code here
-  array.splice(index, 1);
+   return array.splice(index, 1);
 };
 
 const numbersToStrings = numbers => {
@@ -47,12 +47,13 @@ const uppercaseWordsInArray = strings => {
 
 const reverseWordsInArray = strings => {
   // your code here
-  return strings.map(word =>
+  return reverseWords = strings.map(word =>
     word
       .split('')
       .reverse()
       .join('')
   );
+  return reverseWords;
 };
 
 const onlyEven = numbers => {
@@ -61,15 +62,21 @@ const onlyEven = numbers => {
 };
 
 const removeNthElement2 = (index, array) => {
-  // your code here
-  const newArray = array.slice(0, index);
-  const secondArray = array.slice(index + 1);
-  return newArray.concat(secondArray);
+  let removeNth = array.slice(0, index).concat(array.slice(index + 1, array.length));
+  return removeNth;
 };
+
+
+// const removeNthElement2 = (index, array) => {
+//   // your code here
+//   const newArray = array.slice(0, index);
+//   const secondArray = array.slice(index + 1);
+//   return newArray.concat(secondArray);
+// };
 
 const elementsStartingWithAVowel = strings => {
   // your code here
-  return strings.filter(string => string[0].match(/[aeiou]/gi));
+  return strings.filter(strings => (/^[aeiou]/i.test(strings)));
 };
 
 const removeSpaces = string => {
